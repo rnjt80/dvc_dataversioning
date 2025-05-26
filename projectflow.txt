@@ -1,2 +1,14 @@
 1. Create a git repo and clone it in local.
-2. Create mycode.py and add code to it. (it will save csv file to new folder "data")
+2. Create mycode.py and add code to it. (it will save csv file to new folder "data").
+3. Do git add-commit-push before initializing dvc.(make sure you have put data folder in .gitignore as we will be tracking data folder via DVC)
+4. pip install dvc # if not installed already.
+5. Now do 'dvc init' to initialize DVC. It will create .dvcignore and .dvc.
+6. Do 'mkdir S3' and treat it as your remote S3 location
+7. Now do "dvc remote add -d myremote S3".
+8. Next "dvc add data/".
+9. Then "git add .gitignore data.dvc .dvc/config". then "git commit-push"
+10. Now "dvc commit" and "dvc push" this will push data to remote destinaton in our case it is S3 folder.
+11. Now "git add-commit-push" to mark this stage as first version of data.
+12. Now make changes to mycode.py to append a new row in data, check changes via "dvc status".
+13. Then "dvc commit" and "dvc push"
+14. Then "git add-commit-push" (we are saving v2 of our data at this point).

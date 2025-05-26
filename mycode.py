@@ -7,7 +7,7 @@ def create_dataframe():
     data = {
         "id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "review": [
-            "Greate good and ambiance",
+            "Greate good and ambiance v2",
             "Terrible service",
             "Amazing experiance!",
             "Food was cold.",
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     save_dataframe(df)
 
     # Step 3
-    k = 3
+    k = 5
     processed_df = process_data(k)
 
     # Display processed dataframe
