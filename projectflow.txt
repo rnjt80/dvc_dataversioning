@@ -12,3 +12,4 @@
 12. Now make changes to mycode.py to append a new row in data, check changes via "dvc status".
 13. Then "dvc commit" and "dvc push"
 14. Then "git add-commit-push" (we are saving v2 of our data at this point).
+15. To roll out to previous version of data do "git checkout " to commit has of 'first version of data' and then "do dvc pull"
